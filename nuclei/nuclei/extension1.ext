@@ -1,0 +1,7 @@
+(
+   (SET C '11')
+   (SET E C)
+   (SET F (MOD C '2'))
+   (IF (EQUAL F '1') ((PRINT "ODD NUMBER")) ((PRINT "EVEN NUMBER")))
+)
+

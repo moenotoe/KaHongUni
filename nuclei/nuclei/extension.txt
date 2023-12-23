@@ -1,0 +1,59 @@
+#extension
+In the extension, i extend the formal grammar with 6 additional functions in <INTUNC>
+and 3 addtional conditions in <BOOLFUNC>
+Use ./extension to use these functions
+
+
+# (N)eill's (U)n(C)ommon (L)isp (E)xpression (I)nterpreter 
+<PROG>     ::= "(" <INSTRCTS>
+
+<INSTRCTS> ::= <INSTRCT> <INSTRCTS> | ")"
+
+<INSTRCT>  ::= "(" <FUNC> ")"
+
+<FUNC>     ::= <RETFUNC> | <IOFUNC> | <IF> | <LOOP>
+
+<RETFUNC>  ::= <LISTFUNC> | <INTFUNC> | <BOOLFUNC>
+
+<LISTFUNC> ::= "CAR" <LIST> | "CDR" <LIST> | "CONS" <LIST> <LIST>
+
+/*
+Note:   MUL=multiplication
+        SQRT=square root
+        POW=power
+        DIV=division
+        FABS=get the absolute value
+        MOD=modulus
+But we can only input and output an integer
+For example: 
+    ((PRINT (SQRT '8'))) = 2
+    ((PRINT (DIV '5' '2'))) = 2
+*/
+<INTFUNC>  ::= "PLUS" <LIST> <LIST> | "LENGTH" <LIST> | 
+               "MUL" <LIST> <LIST> | "SQRT" <LIST> | "POW" <LIST> <LIST> | 
+               "DIV" <LIST> <LIST> | "FABS" <LIST> | "MOD" <LIST> <LIST>
+
+#The LESEQU(<=) , GRAEQU(>=) and NOTEQU(!=) conditions are added
+<BOOLFUNC> ::= "LESS" <LIST> <LIST> | "GREATER" <LIST> <LIST> | "EQUAL" <LIST> <LIST> | 
+               "GRAEQU" <LIST><LIST> | "LESEQU" <LIST><LIST>  | "NOTEQU" <LIST><LIST>
+
+<IOFUNC>   ::= <SET> | <PRINT>
+<SET>      ::= "SET" <VAR> <LIST>
+<PRINT>    ::= "PRINT" <LIST> | "PRINT" <STRING>
+
+# (IF (CONDITION) ((IF-TRUE-INSTRCTS)) ((IF_FALSE_INSTRCTS)))
+<IF>       ::= "IF" "(" <BOOLFUNC> ")" "(" <INSTRCTS> "(" <INSTRCTS>
+
+<LOOP>     ::= "WHILE""(" <BOOLFUNC> ")" "(" <INSTRCTS>
+
+<LIST>     ::= <VAR> | <LITERAL> | "NIL" | "(" <RETFUNC> ")"
+
+# Variables are just one letter A, B, Z etc.
+<VAR>      ::= [A-Z]
+
+# For printing only:
+<STRING>   ::= Double-quoted string constant e.g. "Hello, World!", or "FAILURE ?"
+
+# Since lists appear in bracket, to differentiate them
+# from instructions, we use 'single' quotes:
+<LITERAL> ::= Single-quoted list e.g. '(1)', '(1 2 3 (4 5))', or '2'

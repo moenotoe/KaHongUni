@@ -1,0 +1,19 @@
+In the testing, Firstly, I did't try to read the .ncl file . Instead, 
+i tried to type token by token such as "SET","A" and then call 
+the function to check if they are correct combination, if not , 
+it would be ERROR and exit. 
+
+After finish all the parsing, i extend the function and let it can be
+interped. For the 'white-box testing', i tried to type token by token as well,
+then when the current word are the keywords, i called the corresponding functions
+to make it as a lisp, then call 'lisp_tostring' and use assertion to check
+if the answers are correct(EX: when the current words is 'PLUS', i call the 
+'int_PLUS_inter' function and then let it to be a string and use assertion
+to check the answers). For using this method, i sperated many small lisp functions.
+
+After finish the interpreter test, i wrote the functions to read the .ncl
+files to achieve the 'black-box testing', i read the given .ncl files and 
+type many extra files to exclude the additional situation that the given .ncl
+files don't have.
+
+In the extension part, I used the same way with interpreter. 
