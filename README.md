@@ -21,6 +21,7 @@ Automatically solves various Binary Grid puzzles based on the three main rules o
 
 ## 5. Wizard Pool Game
 Developed a game in collaboration with a team of five, utilizing the Agile development model. This included the complete development process, such as use case diagrams, prototypes, and evaluations like Heuristic Evaluation. Applied software development theories in practice and worked cooperatively with the team.
+
 [Team Project](https://github.com/UoB-COMSM0110/2023-group-6)
 
 
