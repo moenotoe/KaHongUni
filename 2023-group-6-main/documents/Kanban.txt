@@ -1,0 +1,27 @@
+To Do:
+
+-impliment game rules; 
+  -assign ownership to player 1, 2 ...
+
+
+
+-wizards tings.........
+
+
+In Progress:      Name:
+- player class/ turns  Jake
+- white ball      Jake
+-add pockets  Josh
+- score       Josh
+-landing page - waei
+-tutorial text boxes - waei
+
+Completed:
+-Ball collisions
+-get table layout 
+-wall collisions
+-stick tracks mouse
+-add a stick power metric
+-add friction to the table
+-add colition between stick and balls 
+-end game after all balls have been pocketed / player
