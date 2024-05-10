@@ -26,7 +26,7 @@
       <td>Jake Roberts</td>
       <td>ci19032@brsitol.ac.uk</td>
       <td valign="top" rowspan="5">
-      <img src="KaHongUni/2023-group-6-main/documents/teamPhoto.jpg" alt="Team Photo" width="250">
+      <img src="2023-group-6-main/documents/teamPhoto.jpg" alt="Team Photo" width="250">
     </td>
     </tr>
     <tr>
